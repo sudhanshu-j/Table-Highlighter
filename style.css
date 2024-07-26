@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #74ebd5;
+  background-image: linear-gradient(
+    122deg,
+    rgb(116, 235, 213, 0.7) 0%,
+    rgb(159, 172, 230, 0.6) 33%,
+    rgba(215, 131, 226, 0.612) 66%,
+    hsla(109, 100%, 85%, 0.631) 100%
+  );
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-weight: 500;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  th {
+    font-size: 1.225rem;
+    background-color: #2b2a58;
+  }
+}
+
+tbody {
+  tr {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  td {
+    color: #000000;
+    font-size: 1.125rem;
+    position: relative;
+
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+    }
+  }
+}
